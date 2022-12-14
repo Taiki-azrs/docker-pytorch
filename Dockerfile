@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
     git gcc python3 python3-pip python3.8 libpython3.8-dev zlib1g-dev libjpeg62-dev curl ca-certificates tree \
-    libglib2.0-0 libsm6 libice6 libxrender1 libxext6 libx11-6 && \
+    libglib2.0-0 libsm6 libice6 libxrender1 libxext6 libx11-6 libgl1-mesa-dev && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 RUN cd $(dirname $(which python3.8)) && rm python3 && ln -s python3.8 python3
 
